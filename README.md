@@ -1,17 +1,16 @@
 # LLM Project
 
 ## Project Task
-(fill in details about your chosen project)
+The chosen project task is Sentiment Analysis on IMDB Movie Reviews. The goal is to develop a model that classifies movie reviews as positive or negative.
 
 ## Dataset
-(fill in details about the dataset you're using)
+The dataset used is the IMDB Movie Reviews dataset, which contains 50,000 reviews labeled as positive or negative. It is divided into training (25,000 reviews) and test (25,000 reviews) splits.
 
 ## Pre-trained Model
-(fill in details about the pre-trained model you selected)
+The pre-trained model selected for this project is BERT (Bidirectional Encoder Representations from Transformers), known for its effectiveness in understanding the context of text for sentiment analysis.
 
 ## Performance Metrics
-(fill in details about your chosen metrics and results)
+The performance of the model will be evaluated using accuracy, precision, recall, and F1-score.
 
 ## Hyperparameters
-(fill in details about which hyperparemeters you found most important/relevant while optimizing your model)
-
+Key hyperparameters to be optimized include learning rate, batch size, number of epochs, and dropout rate.
