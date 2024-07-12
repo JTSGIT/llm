@@ -35,10 +35,7 @@ The model was fine-tuned using the Hugging Face `Trainer` API. The training proc
 
 ### Results
 The optimized model achieved the following performance on the test set:
-- **Accuracy:** (Add actual accuracy result here)
-- **Precision:** (Add actual precision result here)
-- **Recall:** (Add actual recall result here)
-- **F1-Score:** (Add actual F1-score result here)
+TrainOutput(global_step=3128, training_loss=0.15530664346102255, metrics={'train_runtime': 85482.4917, 'train_samples_per_second': 1.17, 'train_steps_per_second': 0.037, 'total_flos': 1.32467398656e+16, 'train_loss': 0.15530664346102255, 'epoch': 4.0})
 
 ### Conclusion
 The fine-tuned DistilBERT model for sentiment analysis on the IMDB dataset performed well, achieving high accuracy and balanced precision and recall. The optimization of hyperparameters such as learning rate, batch size, and number of epochs contributed to the improved performance. By pushing the model to the Hugging Face Hub, it is made accessible for further use and contributions from the NLP community.
