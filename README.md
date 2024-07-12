@@ -1,47 +1,35 @@
 # LLM Project
 
 ## Project Task
-The chosen project task is Sentiment Analysis on IMDB Movie Reviews. The goal is to develop a model that classifies movie reviews as positive or negative.
+The task is Sentiment Analysis on IMDB Movie Reviews to classify reviews as positive or negative.
 
 ## Dataset
-The dataset used is the IMDB Movie Reviews dataset, which contains 50,000 reviews labeled as positive or negative. It is divided into training (25,000 reviews) and test (25,000 reviews) splits.
+The IMDB Movie Reviews dataset with 50,000 reviews, split into 25,000 for training and 25,000 for testing, was used.
 
 ## Pre-trained Model
-The pre-trained model selected for this project is DistilBERT (Distilled Bidirectional Encoder Representations from Transformers), known for its effectiveness in understanding the context of text for sentiment analysis.
+I selected [BERT (Bidirectional Encoder Representations from Transformers)](https://github.com/google-research/bert) for its strong performance in NLP tasks, versatility for fine-tuning, and extensive community support. BERT demonstrated effective performance in initial experiments with our dataset.
 
 ## Performance Metrics
-The performance of the model is evaluated using the following metrics:
-- **Accuracy:** Measures the proportion of correct predictions.
-- **Precision:** Measures the proportion of true positive predictions out of all positive predictions.
-- **Recall:** Measures the proportion of true positive predictions out of all actual positives.
-- **F1-Score:** The harmonic mean of precision and recall, providing a single metric to balance both concerns.
+The model was evaluated using accuracy, precision, recall, and F1-score.
 
 ## Hyperparameters
-Key hyperparameters optimized during training include:
+Optimized hyperparameters included:
 - **Learning Rate:** 3e-5
 - **Batch Size (Training):** 32
 - **Batch Size (Evaluation):** 64
-- **Number of Epochs:** 4
+- **Epochs:** 4
 - **Weight Decay:** 0.01
 - **Warmup Steps:** 500
 
 ## Model Training and Evaluation
-The model was fine-tuned using the Hugging Face `Trainer` API. The training process involved:
-1. Preprocessing the dataset using the DistilBERT tokenizer.
-2. Defining a custom metric computation function to evaluate the model using accuracy and F1-score.
-3. Initializing the `Trainer` with the DistilBERT model, training arguments, dataset splits, and custom metrics.
-4. Training the model with the specified hyperparameters.
-5. Evaluating the model on the test dataset.
+The model was fine-tuned using the Hugging Face `Trainer` API. The process involved preprocessing the dataset, defining custom metrics, and training with the specified hyperparameters. The model achieved high accuracy and balanced precision and recall.
 
-### Results
-The optimized model achieved the following performance on the test set:
-TrainOutput(global_step=3128, training_loss=0.15530664346102255, metrics={'train_runtime': 85482.4917, 'train_samples_per_second': 1.17, 'train_steps_per_second': 0.037, 'total_flos': 1.32467398656e+16, 'train_loss': 0.15530664346102255, 'epoch': 4.0})
+## Issues and Next Steps
+There were issues uploading the model to Hugging Face Hub due to size constraints. Future work includes further hyperparameter tuning, exploring different models, and implementing real-time sentiment analysis.
 
-### Conclusion
-The fine-tuned DistilBERT model for sentiment analysis on the IMDB dataset performed well, achieving high accuracy and balanced precision and recall. The optimization of hyperparameters such as learning rate, batch size, and number of epochs contributed to the improved performance. By pushing the model to the Hugging Face Hub, it is made accessible for further use and contributions from the NLP community.
+## Model Output
+The fine-tuned BERT model outputs labels ('POSITIVE' or 'NEGATIVE') with confidence scores. For example:
+- **Text:** "I love this movie, it was fantastic!"
+- **Prediction:** {'label': 'POSITIVE', 'score': 0.9998}
 
-## Future Work
-- **Hyperparameter Tuning:** Further optimization of hyperparameters to improve model performance.
-- **Model Comparison:** Fine-tuning and comparing different pre-trained models like RoBERTa, ALBERT, and others.
-- **Data Augmentation:** Exploring data augmentation techniques to enhance the dataset and improve model robustness.
-- **Real-time Inference:** Deploying the model for real-time sentiment analysis in a production environment.
+By fine-tuning BERT, the model effectively classifies movie reviews accurately.
