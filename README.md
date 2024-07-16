@@ -7,7 +7,7 @@ The task is Sentiment Analysis on IMDB Movie Reviews to classify reviews as posi
 The IMDB Movie Reviews dataset with 50,000 reviews, split into 25,000 for training and 25,000 for testing, was used.
 
 ## EDA
-I explored the dataset using the dataset viewer on huggingface. This gave me confidence in the accuracy of the data and assurance it would work with my model if my code is structured properly 
+For the EDA, I leveraged Python libraries to analyze text lengths, word frequencies, and sentiment-specific keywords. I utilized histograms to understand the distribution of review lengths and word clouds to visualize the most common words in positive and negative reviews. This helped identify key words that frequently appear in each sentiment category, aiding in the refinement of text preprocessing and feature extraction for the sentiment analysis model.
 
 ## Pre-trained Model
 I selected [BERT (Bidirectional Encoder Representations from Transformers)](https://github.com/google-research/bert) for its strong performance in NLP tasks, versatility for fine-tuning, and extensive community support. BERT demonstrated effective performance in initial experiments with our dataset.
